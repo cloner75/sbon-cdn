@@ -34,7 +34,7 @@ export default class UploadController {
     async upload(req, reply) {
         const start = Date.now();
         try {
-            req.body.type = req.url.split('/')[4];
+            req.body.type = req.url.split('/')[1];
             const urls = await Upload.upload({
                 body: req.body,
                 files: req.body.type === 'product' ? req.files : [req.file],
@@ -71,8 +71,9 @@ export default class UploadController {
     async show(req, reply) {
         const start = Date.now();
         try {
-            const fileName = req.params.name;
+            const fileNameWithExtention = req.params.name;
             const { type } = req.query;
+            const fileName = fileNameWithExtention.split('.')[0];
             const file = await UploadModel.findOne({ fileName });
             if (!file) {
                 return reply.status(404).send(Response.generator(404));
