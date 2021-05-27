@@ -19,8 +19,6 @@ const uploadCategory = uploader.config('category');
 const uploadBrand = uploader.config('brand');
 const uploadOption = uploader.config('option');
 
-const url = '/api/v1/upload';
-
 // Routes
 export default (fastify, _opts, done) => {
     // Hooks
