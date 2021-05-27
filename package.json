@@ -7,7 +7,7 @@
     "test": "mocha",
     "build": "babel src -d build",
     "start:dev": "npm run build && node build/index.js",
-    "start":"pm2 start build/index.js -i 2 --name 'upload service'",
+    "start":"pm2 start build/index.js -i max --name 'cdn-service'",
     "pretest": "eslint --ignore-path .gitignore .",
     "doc": "./node_modules/.bin/jsdoc ./src/controllers/"
   },
