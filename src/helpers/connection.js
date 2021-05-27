@@ -57,11 +57,10 @@ class Connection {
                 break;
             case 'development':
                 Object.assign(dbConfig, {
-                    address: `mongodb://192.168.1.186:27017/sbon`
+                    address: `mongodb://localhost:27017/sbon`
                 });
                 break;
         }
-
         if (mongoose.connection.readyState === 0) {
             mongoose.connect(
                 `${dbConfig.address}?${dbConfig.auth}`,
