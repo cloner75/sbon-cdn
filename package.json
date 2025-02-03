@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/runtime": "^7.6.0",
+    "@babel/runtime": "^7.26.0",
     "cors": "^2.8.5",
     "dns-prefetch-control": "^0.3.0",
     "dotenv": "^8.1.0",
